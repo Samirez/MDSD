@@ -19,6 +19,7 @@ public class EntityFunctionSequence {
 	    	entity("Teacher");
 	    	relation("Inheritance", "Person", "Student");
 	    	relation("Inheritance", "Person", "Teacher");
+	    	
 	}
 	
 	// Builder definitions, placed in this class to show declarations, place elsewhere in real system

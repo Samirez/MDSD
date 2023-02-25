@@ -25,3 +25,26 @@ public class EntityNestedFunction {
 	static Entity entity(String name, Attribute...attributes) { throw new Error("Not implemented"); }
 	static Attribute attribute(String name, String type) { throw new Error("Not implemented"); }	
 }
+// example from class lecture 3
+class Transition {
+	private String event;
+	private State toState;
+	public Transition(String event, State toState) {
+		this.event = event;
+		this.toState = toState;
+	}
+	public setToState(State toState) {
+		this.toState = toState;
+	}
+}
+
+class TransitionBuilder {
+	Transition currentEvent;
+	public void when(String event) {
+		currentEvent = new Transition(event);
+	}
+	public void to(String toState) {
+		State state =...<toState>;
+		currentTransition.setToState(state);
+	}
+}

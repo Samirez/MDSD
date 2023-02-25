@@ -8,6 +8,7 @@ import entityrelation.model.EntitySystem;
 public abstract class EntityRelationInternalDSL {
 	
 	protected EntitySystem system;
+	protected Map<String Entity> entities = new HashMap<String, Entity>();
 	protected Entity currentEntity;
 	
 	
@@ -50,4 +51,11 @@ public abstract class EntityRelationInternalDSL {
         for(Relation r: system.getRelations()) result.append(r.toString()+'\n');
         return result.toString();
     }
+	// EXAMPLE from lecture 3
+	public enum Type{
+		String, Number;
+	}
+	public enum State {
+		STOP, PLAYING, PAUSED;
+	}
 }

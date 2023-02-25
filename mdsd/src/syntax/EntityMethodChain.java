@@ -26,5 +26,11 @@ public class EntityMethodChain {
 		Builder relation(String type, String from, String to);
 		Builder attribute(String type, String name);
 	}
+	// this extra interface adds another layer of complexity
+	private interface EntityBuilder {
+		EntityBuilder entity(String name);
+		Builder relation(String type, String from, String to);
+		EntityBuilder attribute(String type, String name);
+	}
 	static Builder system(String name) { return null; }
 }
